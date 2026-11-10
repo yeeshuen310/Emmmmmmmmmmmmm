@@ -1,0 +1,1 @@
+"""YxStock application package."""
