@@ -54,3 +54,9 @@ python -m unittest discover -s tests -v
 ```
 
 Tests use deterministic local samples and mocked Yahoo responses for automated checks. A live provider check can be run by loading AAPL and `1155.KL` in the dashboard; provider availability may change. The application never uses test samples as market data.
+
+## Deploy on Streamlit Community Cloud
+
+The GitHub repository root contains `app.py` and `requirements.txt`; create a Community Cloud app with repository `yeeshuen310/Emmmmmmmmmmmmm`, branch `main`, and entrypoint `app.py`. The `src/` package path is added by the app at startup, and `.streamlit/config.toml` applies the terminal dark theme.
+
+Community Cloud's local filesystem is ephemeral. The SQLite database can be recreated after a restart or redeploy, so watchlist and local cache persistence is not guaranteed in the hosted app. Do not use the hosted instance as the sole copy of personal data.

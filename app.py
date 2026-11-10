@@ -1,5 +1,11 @@
 """YxStock Streamlit dashboard."""
 
+import sys
+from pathlib import Path
+
+# Streamlit Community Cloud launches from the repository root; make src-layout imports explicit.
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
 import plotly.graph_objects as go
 import pandas as pd
 import streamlit as st
